@@ -78,10 +78,12 @@ sudo mkdir -p /REPOSITORY/gitea/app/{custom,data,log}
 sudo mkdir -p /REPOSITORY/gitea/conf
 sudo mkdir -p /REPOSITORY/gitea/repository/gitea-repositories
 sudo cp app.ini /REPOSITORY/gitea/conf
+sudo chmod 640 /REPOSITORY/gitea/conf/app.ini
 sudo chown -R git:git /REPOSITORY
 
 #creo il servizio di gitea
 sudo cp gitea.service /etc/systemd/system
+sudo schmod 640 /etc/systemd/system/gitea.service
 
 #Aggiorno il demone per prendere il nuovo servizio e avvio il servizio
 sudo systemctl daemon-reload
