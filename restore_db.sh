@@ -21,9 +21,9 @@ tar -p --same-owner -zxvf ${FILENAME}
 
 #Sostituisco le cartelle app e repository
 rm -fr app
-mv /REPOSITORY/gitea/app .
+mv REPOSITORY/gitea/app .
 rm -fr repository
-mv /REPOSITORY/gitea/repository .
+mv REPOSITORY/gitea/repository .
 
 #rimovo le cartelle che non servono più
 rm -fr REPOSITORY 
